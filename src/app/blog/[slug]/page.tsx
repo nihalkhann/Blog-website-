@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 import { urlFor } from '@/sanity/lib/image'
 import Link from 'next/link'
-import { CornerDownLeft } from 'lucide-react';
+import { CornerDownLeft, MoveLeft } from 'lucide-react';
 
 // Add this type for params
 type Props = {
@@ -111,12 +111,19 @@ export default async function BlogPost({ params }: Props) {
         <PortableText value={post.content} />
       <h2>{post.summary}</h2>
         <Link href={"/"}>
-          <button className='text-gray-800  hover:text-gray-600   font-bold md:ml-[600px]'
+          <button className='text-gray-800  hover:text-gray-600  mt-6 font-bold ml-[280px] md:ml-[500px]'
           >
-            <CornerDownLeft className='ml-56 mt-5'/>
+            <MoveLeft />
         </button>
         </Link>
       </div>
     </article>
   )
 }
+
+
+
+
+
+
+

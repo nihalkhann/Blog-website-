@@ -60,7 +60,7 @@ export default async function Home() {
                 </div>
               )}
               <div className="p-4">
-                <h2 className="text-xl font-semibold mb-2 group-hover:text-gray-800">
+                <h2 className="text-xl font-semibold mb-2 group-hover:text-gray-800 ">
                   {post.title}
                 </h2>
                 <p className="text-gray-600 mb-4 line-clamp-2">
@@ -70,7 +70,7 @@ export default async function Home() {
                   
                     <div className="relative w-8 h-8 rounded-full overflow-hidden mr-2">
                       <Image
-                        src={urlFor(post.image).url()}
+                        src={urlFor(post.author.image).url()}
                         alt={post.author.name}
                         fill
                         className="object-cover"

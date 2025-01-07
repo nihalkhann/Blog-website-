@@ -11,65 +11,61 @@ const Header = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-4">
-      <div className="max-w-7xl mx-auto px-4 md:px-10 flex justify-between items-center">
-        
-        <Link href="/" className="text-white text-2xl font-bold">
-          Blog
+    <nav className='bg-gray-800 p-4'>
+      <div className='max-w-7xl mx-auto  md:px-14 flex justify-between items-center'>
+        <Link href='/' className='text-white text-2xl font-bold'>
+          AI Brainwave
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6">
-          <Link href="/" className="text-white hover:text-gray-400">
+        <div className='hidden md:flex space-x-6'>
+          <Link href='/' className='text-white hover:text-gray-400'>
             Home
           </Link>
-          <Link href="/about" className="text-white hover:text-gray-400">
+          <Link href='/about' className='text-white hover:text-gray-400'>
             About
           </Link>
-    
-          <Link href="/contact" className="text-white hover:text-gray-400">
+
+          <Link href='/contact' className='text-white hover:text-gray-400'>
             Contact
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className='md:hidden text-white'
           onClick={toggleMenu}
         >
-          {isOpen ? <X/> : <AlignJustify />}
+          {isOpen ? (
+            <X className='w-6 h-6 transform transition-transform duration-500' />
+          ) : (
+            <AlignJustify className='w-6 h-6 transform transition-transform duration-500' />
+          )}
         </button>
       </div>
 
+      {/* Collapsible Menu */}
       <div
-        className={`fixed inset-0 bg-gray-800 bg-opacity-80 z-10  transition-transform transform  md:hidden duration-700 ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+        className={`flex flex-col bg-gray-800 overflow-hidden transition-all duration-1000 ease-in-out ${
+          isOpen ? 'max-h-60' : 'max-h-0'
         }`}
       >
-        <div className="flex justify-end p-4">
-          <button
-            onClick={toggleMenu}
-            className="text-white text-2xl"
-          >
-            <X/>
-          </button>
-        </div>
-
-        <div className="flex flex-col items-center space-y-6">
-          <Link href="/" className="text-white text-xl hover:text-gray-400" onClick={toggleMenu}>
+        <div className='text-md px-4 gap-y-2 mt-3 space-y-2'>
+          <Link href='/' className='block text-white hover:text-gray-400'>
             Home
           </Link>
-          <Link href="/about" className="text-white text-xl hover:text-gray-400" onClick={toggleMenu}>
+          <Link href='/about' className='block text-white hover:text-gray-400'>
             About
           </Link>
-          
-          <Link href="/contact" className="text-white text-xl hover:text-gray-400" onClick={toggleMenu}>
+          <Link
+            href='/contact'
+            className='block text-white hover:text-gray-400'
+          >
             Contact
           </Link>
         </div>
       </div>
     </nav>
-  );
+  )
 };
 
 export default Header;

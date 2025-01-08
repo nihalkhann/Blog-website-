@@ -95,7 +95,7 @@ const Footer = () => {
         </div>
       </div>
        <div className=" border-gray-800 mt-2 pt-6 text-center">
-        <p className="text-gray-500">
+        <p className="text-gray-200">
           © {currentYear} Nihal Khan Ghouri. All Rights Reserved.
         </p>
       </div>

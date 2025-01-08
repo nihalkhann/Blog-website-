@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <nav className='bg-gray-800 p-4'>
+    <nav className='bg-black p-4'>
       <div className='max-w-7xl mx-auto  md:px-14 flex justify-between items-center'>
         <Link href='/' className='text-white text-2xl font-bold'>
           AI Brainwave

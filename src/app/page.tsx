@@ -33,7 +33,7 @@ async function getPosts(): Promise<IPost[]> {
 
   return client.fetch(query)
 }
-
+export const revalidate = 60;
 export default async function Home() {
   const posts = await getPosts()
 
